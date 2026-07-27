@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Room Monitoring</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>🏠 Smart Room Monitoring</h1>
+            <p>Realtime Temperature & Humidity Dashboard</p>
+
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h2>🌡 Temperature</h2>
+
+                <h1 id="temperature">
+                    -- °C
+                </h1>
+
+            </div>
+
+            <div class="card">
+
+                <h2>💧 Humidity</h2>
+
+                <h1 id="humidity">
+                    -- %
+                </h1>
+
+            </div>
+
+        </section>
+
+        <section class="status-card">
+
+            <h2 id="roomStatus">
+                🟢 Comfortable
+            </h2>
+
+            <h3>
+                Comfort Score
+            </h3>
+
+            <h1 id="comfortScore">
+                100
+            </h1>
+
+            <p id=""recommendation">
+                No Action required
+            </p>
+            
+        </section>
+
+        <section class="statistics">
+
+            <h2>📊 Statistics</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-box">
+
+                    <h3>🌡 Temperature</h3>
+
+                    <p>Highest : <span id="maxTemp">-</span></p>
+
+                    <p>Lowest : <span id="minTemp">-</span></p>
+
+                    <p>Average : <span id="avgTemp">-</span></p>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h3>💧 Humidity</h3>
+
+                    <p>Highest : <span id="maxHum">-</span></p>
+
+                    <p>Lowest : <span id="minHum">-</span></p>
+
+                    <p>Average : <span id="avgHum">-</span></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="chart-container">
+
+            <h2>Temperature & Humidity Chart</h2>
+
+            <canvas id="sensorChart"></canvas>
+
+        </section>
+
+        <section class="history">
+
+            <h2>Sensor History</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Time</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="historyTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
